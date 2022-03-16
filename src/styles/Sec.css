@@ -1,0 +1,17 @@
+.container {
+    display:flex;
+    align-items: center;
+   
+}
+.container-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    height: 100vh;
+    border: 5px solid #3be8ff;
+}
+.item-right {
+    
+    justify-content: flex-start;
+}

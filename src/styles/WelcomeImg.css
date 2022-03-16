@@ -1,0 +1,12 @@
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000000;
+}
+.frame img {
+    max-width:50%;
+    max-height:50%;
+    vertical-align: middle;
+}

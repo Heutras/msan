@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import Sidebar from "./components/Sidebar.js"
+import Sec from "./components/Sec.js"
+import WelcomeText from "./components/WelcomeText.js"
+import WelcomeImg from "./components/WelcomeImg.js"
 import './App.css';
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar pageWrapId={ "Wrapper" } outerContainerId={ "App" }/>
+      <main id="Wrapper">
+        <Sec left={<WelcomeText/>} right={<WelcomeImg/>}/>
+        <Sec left={<WelcomeText/>} right={<WelcomeImg/>}/>
+      </main> 
     </div>
   );
 }
-
-export default App;
