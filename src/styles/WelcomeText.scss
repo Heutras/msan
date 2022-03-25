@@ -27,7 +27,6 @@ $animation-curve: cubic-bezier(1,.5,.25,.5);
     width: 47vw;
     z-index: -1;
 }
-
 .container-background{
     z-index: 0;
 	transform: translate(-50%, -50%);
@@ -107,6 +106,60 @@ $animation-curve: cubic-bezier(1,.5,.25,.5);
 	}
 }
 
+
+
+.container-welcome-text {
+    position: relative;
+	top:25vh;
+	right:8vw;
+    z-index: 1;
+}
+.line-text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+    font-family: Poppins;
+    font-size: 22px;
+	> h4::after {
+		content: "";
+		position: relative;
+		right:6.5vw;
+		bottom:1.5vh;
+		height: 4px;
+		width: 120px;
+		display: block;
+		background-color: #000;
+		
+	}
+}
+
+.glitch-box {
+	position:relative;
+	bottom:5rem;
+	left:1rem;
+	color: #fff;
+	font-size: 4em;
+	padding: 0;
+	animation: glitch-skew 1s infinite linear alternate-reverse;
+    
+    text-shadow: -2px 0 #ff00c1, 2px 2px #ff00c1;
+	&::before {
+		@include glitchCopy;
+		left: 2px;
+		clip: rect(44px, 450px, 56px, 0);
+		animation: glitch-anim 5s infinite linear alternate-reverse;
+		
+	  }
+	
+	  &::after {
+		@include glitchCopy;
+		left: -2px;
+		clip: rect(44px, 450px, 56px, 0);
+		animation: glitch-anim2 5s infinite linear alternate-reverse;
+	  }
+}
+
 @keyframes rotate-right {
     0% { transform:translate(-50%, -50%) rotate(0deg); }
     25% { transform:translate(-50%, -50%) rotate(45deg); }
@@ -130,8 +183,24 @@ $animation-curve: cubic-bezier(1,.5,.25,.5);
     75% { background-color: hsla(random(360), 50%, 50%, 100*random(100)*.1); }
 }
 
-.container-welcome-text {
-    position: relative;
-    z-index: 1;
+@keyframes glitch-anim {
+	$steps: 20;
+	@for $i from 0 to $steps {
+		#{percentage($i*(1/$steps))} {
+		clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+		transform: skew((random(100) / 100) + deg);
+		}
+	}
+}
+
+@keyframes glitch-anim2 {
+	$steps: 20;
+	@for $i from 0 to $steps {
+		#{percentage($i*(1/$steps))} {
+		clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+		transform: skew((random(100) / 100) + deg);
+		}
+	}
+}
 
 }

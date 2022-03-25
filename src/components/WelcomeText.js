@@ -12,10 +12,18 @@ export default class WelcomeText extends React.Component {
            <div className="container-welcome-text">
              <hr></hr>
              <h4>Hello, I'm</h4>
-             <h2>John Neo</h2>
-             <h2>developer</h2>
-             <button>Download CV</button>
-           </div>
+            </div>
+            <p className="glitch-text" data-text="Berkay Şan">Berkay Şan</p>
+            <Typewriter
+            options={{
+              strings: ['Hello', 'World'],
+              autoStart: true,
+              loop: true,
+            }}
+            />
+            <h3>developer asdsads</h3>
+            <button>Download CV</button>
+            </div>         
            
             <div className="container-background">
               
