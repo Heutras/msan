@@ -1,4 +1,7 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
+import { GlitchAnimation } from 'react-glitch-animation';
+import Button from "./Button.js"
 import '../styles/WelcomeText.scss';
 export default class WelcomeText extends React.Component {
     constructor(props) {
@@ -9,25 +12,22 @@ export default class WelcomeText extends React.Component {
     render() {
         return (
           <div className="page-welcome-text">
-           <div className="container-welcome-text">
-             <hr></hr>
-             <h4>Hello, I'm</h4>
+            <div className="container-welcome-text">
+            <div className="line-text">
+              <h4>Hello, I'm</h4>
             </div>
-            <p className="glitch-text" data-text="Berkay Şan">Berkay Şan</p>
+            <GlitchAnimation isActive={true} animationDurationMS={0} text="Berkay Şan"/>
             <Typewriter
             options={{
-              strings: ['Hello', 'World'],
+              strings: ['Teaching Asistant', 'AI Developer'],
               autoStart: true,
               loop: true,
             }}
             />
-            <h3>developer asdsads</h3>
-            <button>Download CV</button>
+            <Button content="Download CV"/>
             </div>         
-           
             <div className="container-background">
-              
-              <div className="row">
+            <div className="row"> 
                 <div className="loader">
                   <div className="lines"><span></span><span></span><span></span><span></span>
                   </div>
@@ -40,24 +40,8 @@ export default class WelcomeText extends React.Component {
                   <div className="lines"><span></span><span></span><span></span><span></span>
                   </div>
                 </div>
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
+              </div>              
+              <div className="row"> 
                 <div className="loader">
                   <div className="lines"><span></span><span></span><span></span><span></span>
                   </div>
@@ -71,37 +55,7 @@ export default class WelcomeText extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="row">
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div className="loader">
-                  <div className="lines"><span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
+              <div className="row"> 
                 <div className="loader">
                   <div className="lines"><span></span><span></span><span></span><span></span>
                   </div>
@@ -115,7 +69,7 @@ export default class WelcomeText extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="row">
+              <div className="row"> 
                 <div className="loader">
                   <div className="lines"><span></span><span></span><span></span><span></span>
                   </div>
@@ -124,6 +78,26 @@ export default class WelcomeText extends React.Component {
                   <div className="lines"><span></span><span></span><span></span><span></span>
                   </div>
                 </div>
+                <div className="loader">
+                  <div className="lines"><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+              <div className="row"> 
+                <div className="loader">
+                  <div className="lines"><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div className="loader">
+                  <div className="lines"><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div className="loader">
+                  <div className="lines"><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+              <div className="row"> 
                 <div className="loader">
                   <div className="lines"><span></span><span></span><span></span><span></span>
                   </div>

@@ -1,9 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700i,900i';
-
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
 $lightblue: #3be8ff;
-$blue: #251170;
+$blue: #520079;
 
-*{
+*, *::after, *::before{
   box-sizing: border-box;
 }
 $container-size: 30vw;
@@ -13,17 +13,26 @@ $square-size: $container-size/$squares-count;
 $lines-size: $square-size/$squares-count;
 $squares-padding: 0;
 
-$animation-time: 3s;
+$animation-time: 30s;
 $animation-curve: cubic-bezier(1,.5,.25,.5);
+
+:root {
+	--f-size: 15;
+	--f-unit: 1vmin;
+	--f: calc(var(--f-size) * var(--f-unit) / 1.5);
+	--bg: $blue;
+	--react-glitch-font-size : 100px;
+	--react-glitch-text-background-color : $blue;
+  }
+  
 
 .page-welcome-text{
     position: relative;
-	font-family: 'Playfair Display', serif;
-	color: rgba(172,170,190, 1);
+	font-family: Poppins;
 	font-size: 14px;
     background-color: $blue;
 	overflow: hidden;
-    height: 80vh;
+    height: 85vh;
     width: 47vw;
     z-index: -1;
 }
@@ -33,8 +42,8 @@ $animation-curve: cubic-bezier(1,.5,.25,.5);
 	height: $container-size;
 	width: $container-size;
 	position: absolute;
-	left: 26vw;
-	top: 45vh;
+	left: 45vw;
+	top: 40vh;
 	> .row {
 		position: relative;
 		float: left;
@@ -117,47 +126,31 @@ $animation-curve: cubic-bezier(1,.5,.25,.5);
 .line-text{
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	color: #fff;
-    font-family: Poppins;
-    font-size: 22px;
+    font-size: 25px;
 	> h4::after {
 		content: "";
 		position: relative;
-		right:6.5vw;
+		right:8.5vw;
 		bottom:1.5vh;
 		height: 4px;
 		width: 120px;
 		display: block;
-		background-color: #000;
+		background-color: $lightblue;
 		
 	}
 }
-
-.glitch-box {
-	position:relative;
-	bottom:5rem;
-	left:1rem;
-	color: #fff;
-	font-size: 4em;
-	padding: 0;
-	animation: glitch-skew 1s infinite linear alternate-reverse;
-    
-    text-shadow: -2px 0 #ff00c1, 2px 2px #ff00c1;
-	&::before {
-		@include glitchCopy;
-		left: 2px;
-		clip: rect(44px, 450px, 56px, 0);
-		animation: glitch-anim 5s infinite linear alternate-reverse;
-		
-	  }
-	
-	  &::after {
-		@include glitchCopy;
-		left: -2px;
-		clip: rect(44px, 450px, 56px, 0);
-		animation: glitch-anim2 5s infinite linear alternate-reverse;
-	  }
+.Typewriter__wrapper {
+	font-family: 'Poppins';
+	font-size: 50px;
+	color:#fff;
+}
+.Typewriter__cursor {
+	font-family: 'Poppins';
+	font-size: 50px;
+	color:$lightblue;
+	font-weight:900
 }
 
 @keyframes rotate-right {
@@ -177,30 +170,8 @@ $animation-curve: cubic-bezier(1,.5,.25,.5);
 }
 
 @keyframes shift-background {
-    0%, 100% { background-color: hsla(random(360), 50%, 50%, 100*random(100)*.1); }
-    25% { background-color: hsla(random(360), 50%, 50%, 100*random(100)*.1); }
-    50% { background-color: hsla(random(360), 50%, 50%, 100*random(100)*.1); }
-    75% { background-color: hsla(random(360), 50%, 50%, 100*random(100)*.1); }
-}
-
-@keyframes glitch-anim {
-	$steps: 20;
-	@for $i from 0 to $steps {
-		#{percentage($i*(1/$steps))} {
-		clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-		transform: skew((random(100) / 100) + deg);
-		}
-	}
-}
-
-@keyframes glitch-anim2 {
-	$steps: 20;
-	@for $i from 0 to $steps {
-		#{percentage($i*(1/$steps))} {
-		clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-		transform: skew((random(100) / 100) + deg);
-		}
-	}
-}
-
+	0%, 100% { background-color: hsla(0, 0%, random(100)*1%); }
+	25% { background-color: hsla(0, 0%, random(100)*1%); }
+	50% { background-color: hsla(0, 0%, random(100)*1%); }
+	75% { background-color: hsla(0, 0%, random(100)*1%); }
 }

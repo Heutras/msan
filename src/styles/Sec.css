@@ -9,6 +9,7 @@
     justify-content: flex-end;
     flex: 1;
     height: 100vh;
+    
     border: 5px solid #3be8ff;
 }
 .item-right {
