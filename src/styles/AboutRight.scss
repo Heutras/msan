@@ -1,0 +1,47 @@
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700i,900i';
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+$lightblue: #3be8ff;
+$blue: #520079;
+
+.AboutRight-container {
+    background-color: $blue;
+    height: 100%;
+    width: 100%;
+	display: flex;
+	flex-flow:column wrap;
+	align-content: flex-start;
+	color: #fff;
+    font-size: 25px;
+	padding-left: 5vw;
+	gap:5vh;
+	> h4 {
+		position: relative;
+		right:11vw;
+		top:9vh;
+	}
+	
+	> h4::after {
+		content: "";
+		position: relative;
+		left:11vw;
+		bottom:1.5vh;
+		height: 3px;
+		width: 90px;
+		display: block;
+		background-color: $lightblue;
+	}
+	>h5 {
+		font-size: 18px;
+	}
+	> h5::after {
+		content: "";
+		position: relative;
+		top:1.5vh;
+		height: 10px;
+		width: 40vw;
+		display: block;
+		background-color: #fff;
+		border-radius: 5px;
+		
+	}
+}

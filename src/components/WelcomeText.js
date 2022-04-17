@@ -24,8 +24,11 @@ export default class WelcomeText extends React.Component {
               loop: true,
             }}
             />
+            <div className='button-cv'>
             <Button content="Download CV"/>
-            </div>         
+            </div>
+            
+            </div>
             <div className="container-background">
             <div className="row"> 
                 <div className="loader">
@@ -113,6 +116,8 @@ export default class WelcomeText extends React.Component {
               </div>
             </div>
           </div>
+          
+
         );
         }
   };

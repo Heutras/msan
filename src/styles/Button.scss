@@ -1,5 +1,4 @@
 $color-btn: cyan;
-// Button component
 .button-box {
   position: relative;
   padding: 1em 1.5em;
@@ -9,7 +8,7 @@ $color-btn: cyan;
   outline: none;
   font-size: 18px;
   margin: 1em 0.8em;
-
+  z-index:10;
   &.type1 {
        color: #fff;
     &.type1::after,

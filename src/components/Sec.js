@@ -3,8 +3,6 @@ import '../styles/Sec.css';
 export default class Sec extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {
-      };
     }
     render() {
         if(this.props.header === undefined)
@@ -21,13 +19,27 @@ export default class Sec extends React.Component {
         );
         }
         else
-        {
-            return (
-            <div>
-                <h1>Alper!!!!</h1>
-                {this.props.left}
-            </div>
-        );
+        { 
+            if(this.props.banner === undefined && this.props.footer === undefined){
+            /* Sec content*/
+            }
+            else if(this.props.banner === undefined){
+                /*sec content + footer */
+            }
+            else if(this.props.footer === undefined){
+                /*banner + sec content */
+                return (
+                    <div>
+                        <h1>AAAAAAAAA</h1>
+                        {this.props.banner}
+                        {this.props.main}
+                    </div>
+                    );
+            }
+            else{
+                /*banner + sec content + footer */
+            }
+            /* footer + banner position absolue / sec content fullfill the remaining space */
         }
     
       }

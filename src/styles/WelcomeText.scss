@@ -34,7 +34,7 @@ $animation-curve: cubic-bezier(1,.5,.25,.5);
 	overflow: hidden;
     height: 85vh;
     width: 47vw;
-    z-index: -1;
+    z-index: 0;
 }
 .container-background{
     z-index: 0;
@@ -151,6 +151,12 @@ $animation-curve: cubic-bezier(1,.5,.25,.5);
 	font-size: 50px;
 	color:$lightblue;
 	font-weight:900
+}
+
+.button-cv {
+	position: relative;
+	right : 8vw;
+	top:10vh;
 }
 
 @keyframes rotate-right {
